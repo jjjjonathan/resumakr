@@ -1,5 +1,6 @@
 import React from "react";
 import Line from "../components/Line";
+import Button from "../components/Button";
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -22,7 +23,13 @@ export default class Contact extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.setState({ editMode: false });
+    this.setState((state) => {
+      if (state.editMode === true) {
+        return { editMode: false };
+      } else {
+        return { editMode: true };
+      }
+    });
   }
 
   render() {
@@ -54,9 +61,7 @@ export default class Contact extends React.Component {
             value={this.state.email}
             onChange={this.handleChange}
           />
-          <button type="submit" className="btn btn-outline-primary">
-            Submit
-          </button>
+          <Button editMode={this.state.editMode} />
         </form>
       </div>
     );
