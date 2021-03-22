@@ -34,18 +34,15 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <div>
-        <form
-          noValidate
-          className="needs-validation"
-          onSubmit={this.handleSubmit}
-        >
+      <div className="mt-5">
+        <form noValidate onSubmit={this.handleSubmit}>
           <Line
             editMode={this.state.editMode}
             id="fullName"
             title="Full Name"
             value={this.state.fullName}
             onChange={this.handleChange}
+            className="display-4"
           />
           <Line
             editMode={this.state.editMode}
@@ -53,6 +50,7 @@ export default class Contact extends React.Component {
             title="Phone Number"
             value={this.state.phone}
             onChange={this.handleChange}
+            className="h5"
           />
           <Line
             editMode={this.state.editMode}
@@ -60,9 +58,11 @@ export default class Contact extends React.Component {
             title="Email Address"
             value={this.state.email}
             onChange={this.handleChange}
+            className="lead"
           />
           <Button editMode={this.state.editMode} />
         </form>
+        <hr />
       </div>
     );
   }

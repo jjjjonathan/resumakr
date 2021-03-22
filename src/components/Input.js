@@ -13,9 +13,7 @@ export default class Input extends React.Component {
           value={this.props.value}
           onChange={this.props.onChange}
           className="form-control"
-          required
         ></input>
-        <div className="invalid-feedback">{this.props.title} is required</div>
       </div>
     );
   }
