@@ -1,4 +1,5 @@
 import React from "react";
+import Line from "../components/Line";
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -8,6 +9,7 @@ export default class Contact extends React.Component {
       fullName: "",
       phone: "",
       email: "",
+      editMode: true,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -20,7 +22,7 @@ export default class Contact extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state.fullName, this.state.phone, this.state.email);
+    this.setState({ editMode: false });
   }
 
   render() {
@@ -31,42 +33,28 @@ export default class Contact extends React.Component {
           className="needs-validation"
           onSubmit={this.handleSubmit}
         >
-          <label htmlFor="fullName" className="form-label">
-            Full Name:
-          </label>
-          <input
-            type="text"
-            placeholder="Jane Doe"
+          <Line
+            editMode={this.state.editMode}
             id="fullName"
+            title="Full Name"
             value={this.state.fullName}
             onChange={this.handleChange}
-            className="form-control"
-            required
-          ></input>
-          <div className="invalid-feedback">Name is required</div>
-          <label htmlFor="phone" className="form-label">
-            Phone Number:
-          </label>
-          <input
-            type="text"
-            placeholder="555-555-5555"
+          />
+          <Line
+            editMode={this.state.editMode}
             id="phone"
+            title="Phone Number"
             value={this.state.phone}
             onChange={this.handleChange}
-            className="form-control"
-          ></input>
-          <label htmlFor="email" className="form-label">
-            Email Address:
-          </label>
-          <input
-            type="text"
-            placeholder="you@example.com"
+          />
+          <Line
+            editMode={this.state.editMode}
             id="email"
+            title="Email Address"
             value={this.state.email}
             onChange={this.handleChange}
-            className="form-control"
-          ></input>
-          <button type="submit" className="w-100 btb btn-primary btn-lg">
+          />
+          <button type="submit" className="btn btn-outline-primary">
             Submit
           </button>
         </form>
