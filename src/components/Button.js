@@ -6,13 +6,13 @@ export default class Button extends React.Component {
 
     if (this.props.editMode) {
       button = (
-        <button type="submit" className="btn btn-outline-primary">
+        <button type="submit" className="btn btn-outline-primary mt-2">
           Submit
         </button>
       );
     } else {
       button = (
-        <button type="submit" className="btn btn-outline-primary">
+        <button type="submit" className="btn btn-sm btn-outline-primary mt-3">
           Edit
         </button>
       );
