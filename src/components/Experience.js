@@ -35,7 +35,8 @@ export default class Experience extends React.Component {
 
   render() {
     return (
-      <div className="mt-5">
+      <div className="mt-4">
+        <h3 className="display-6 mb-3">Experience</h3>
         <form noValidate onSubmit={this.handleSubmit}>
           <Line
             editMode={this.state.editMode}
@@ -43,7 +44,8 @@ export default class Experience extends React.Component {
             title="Company"
             value={this.state.company}
             onChange={this.handleChange}
-            className="display-4"
+            className="h5"
+            displayTitle
           />
           <Line
             editMode={this.state.editMode}
@@ -51,7 +53,7 @@ export default class Experience extends React.Component {
             title="Position"
             value={this.state.position}
             onChange={this.handleChange}
-            className="h5"
+            displayTitle
           />
           <Line
             editMode={this.state.editMode}
@@ -59,7 +61,7 @@ export default class Experience extends React.Component {
             title="Dates Employed"
             value={this.state.date}
             onChange={this.handleChange}
-            className="lead"
+            displayTitle
           />
           <Line
             editMode={this.state.editMode}
@@ -67,7 +69,7 @@ export default class Experience extends React.Component {
             title="Responsibilities"
             value={this.state.responsibilities}
             onChange={this.handleChange}
-            className="lead"
+            displayTitle
           />
           <Button editMode={this.state.editMode} />
         </form>

@@ -34,8 +34,8 @@ export default class Education extends React.Component {
 
   render() {
     return (
-      <div className="mt-5">
-        <h3 className="display-6">Education</h3>
+      <div className="mt-4">
+        <h3 className="display-6 mb-3">Education</h3>
         <form noValidate onSubmit={this.handleSubmit}>
           <Line
             editMode={this.state.editMode}
@@ -43,7 +43,8 @@ export default class Education extends React.Component {
             title="School"
             value={this.state.school}
             onChange={this.handleChange}
-            className="display-4"
+            className="h5"
+            displayTitle
           />
           <Line
             editMode={this.state.editMode}
@@ -51,7 +52,7 @@ export default class Education extends React.Component {
             title="Degree Program"
             value={this.state.degree}
             onChange={this.handleChange}
-            className="h5"
+            displayTitle
           />
           <Line
             editMode={this.state.editMode}
@@ -59,7 +60,7 @@ export default class Education extends React.Component {
             title="Dates Attended"
             value={this.state.date}
             onChange={this.handleChange}
-            className="lead"
+            displayTitle
           />
           <Button editMode={this.state.editMode} />
         </form>

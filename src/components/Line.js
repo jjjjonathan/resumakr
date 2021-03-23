@@ -21,6 +21,8 @@ export default class Line extends React.Component {
           id={this.props.id}
           className={this.props.className}
           value={this.props.value}
+          displayTitle={this.props.displayTitle}
+          title={this.props.title}
         />
       );
     }

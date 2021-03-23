@@ -42,7 +42,7 @@ export default class Contact extends React.Component {
             title="Full Name"
             value={this.state.fullName}
             onChange={this.handleChange}
-            className="display-4"
+            className="display-4 mb-3"
           />
           <Line
             editMode={this.state.editMode}
@@ -58,7 +58,7 @@ export default class Contact extends React.Component {
             title="Email Address"
             value={this.state.email}
             onChange={this.handleChange}
-            className="lead"
+            className="h5"
           />
           <Button editMode={this.state.editMode} />
         </form>

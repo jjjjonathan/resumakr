@@ -3,9 +3,9 @@ import React from "react";
 export default class Input extends React.Component {
   render() {
     return (
-      <div>
+      <div className="mt-3">
         <label htmlFor={this.props.id} className="form-label">
-          {this.props.title}
+          {this.props.title}:
         </label>
         <input
           type="text"
