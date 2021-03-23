@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/resumakr/static/js/main.070f595b.chunk.js",
+    "main.js.map": "/resumakr/static/js/main.070f595b.chunk.js.map",
+    "runtime-main.js": "/resumakr/static/js/runtime-main.05bf83f7.js",
+    "runtime-main.js.map": "/resumakr/static/js/runtime-main.05bf83f7.js.map",
+    "static/js/2.a18ecccf.chunk.js": "/resumakr/static/js/2.a18ecccf.chunk.js",
+    "static/js/2.a18ecccf.chunk.js.map": "/resumakr/static/js/2.a18ecccf.chunk.js.map",
+    "index.html": "/resumakr/index.html",
+    "static/js/2.a18ecccf.chunk.js.LICENSE.txt": "/resumakr/static/js/2.a18ecccf.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.05bf83f7.js",
+    "static/js/2.a18ecccf.chunk.js",
+    "static/js/main.070f595b.chunk.js"
+  ]
+}
